@@ -229,6 +229,7 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: 110px 10px auto;
   margin-bottom: 6px;
+  align-items: start;
 }
 
 .label {
@@ -242,6 +243,8 @@ h1, h2, h3 {
 
 .value {
   color: #374151;
+  text-align: left;         /* 🔥 force left alignment */
+  justify-self: start;
 }
 
 @media (max-width: 900px) {
