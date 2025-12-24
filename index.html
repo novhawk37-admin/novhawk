@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NovHawk | Projects for Progress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="assets/logo.jpeg" alt="NovHawk Logo">
+  </a>
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+
+
+<!-- Sidebar Toggle Button -->
+
+<div class="menu-btn" onclick="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <span class="close-btn" onclick="toggleSidebar()">×</span>
+
+  <a href="#home" onclick="toggleSidebar()">
+    <i class="fas fa-house"></i> Home
+  </a>
+
+  <a href="about.html" onclick="toggleSidebar()">
+    <i class="fas fa-user"></i> About
+  </a>
+
+  <a href="services.html" onclick="toggleSidebar()">
+    <i class="fas fa-gear"></i> Services
+  </a>
+
+  <a href="projects.html" onclick="toggleSidebar()">
+    <i class="fas fa-briefcase"></i> Projects
+  </a>
+
+  <a href="contact.html" onclick="toggleSidebar()">
+    <i class="fas fa-envelope"></i> Contact
+  </a>
+</div>
+
+
+
+<!-- ================= HOME ================= -->
+<section id="home" class="hero">
+  <h1>Projects for Progress</h1>
+  <p>We build modern software, web apps, and scalable digital products.</p>
+  <button onclick="window.location.href='contact.html'">Get Started</button>
+</section>
+
+
+<!-- ================= DOMAINS ================= -->
+<section id="domains" class="domains">
+  <h2>Our Domains</h2>
+  <p class="domains-subtitle">
+    We work across multiple technology and creative domains to deliver
+    end-to-end solutions.
+  </p>
+
+  <div class="domains-grid">
+
+    <div class="domain-card">
+      <i class="fas fa-microchip"></i>
+      <h3>Embedded Systems</h3>
+      <p>
+        Hardware-level solutions including microcontrollers, sensors,
+        automation systems, and IoT integrations.
+      </p>
+    </div>
+
+    <div class="domain-card">
+      <i class="fas fa-brain"></i>
+      <h3>Artificial Intelligence</h3>
+      <p>
+        Intelligent systems that simulate human decision-making using
+        advanced algorithms and data-driven models.
+      </p>
+    </div>
+
+    <div class="domain-card">
+      <i class="fas fa-robot"></i>
+      <h3>Machine Learning</h3>
+      <p>
+        Predictive models, data analysis, and intelligent automation
+        powered by real-world datasets.
+      </p>
+    </div>
+
+    <div class="domain-card">
+      <i class="fas fa-code"></i>
+      <h3>Web & App Development</h3>
+      <p>
+        Modern, responsive websites and applications built for performance,
+        scalability, and user experience.
+      </p>
+    </div>
+
+    <div class="domain-card">
+      <i class="fas fa-video"></i>
+      <h3>Video Editing</h3>
+      <p>
+        Professional video editing for social media, business promotions, and events.
+      </p>
+    </div>
+
+    <div class="domain-card">
+      <i class="fas fa-camera"></i>
+      <h3>Photo Editing</h3>
+      <p>
+        High-quality photo enhancement, retouching, posters, and visual
+        branding designs.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= PROJECT STATS ================= -->
+<section id="project-stats" class="project-stats">
+  <h2>Our Project Progress</h2>
+  <p>Tracking our journey from inception to completion.</p>
+
+  <div class="stats-grid">
+
+
+    <div class="stat-card">
+      <h3>Total Projects</h3>
+      <p class="stat-number">7</p>
+      <div class="progress-bar">
+        <div class="progress total" style="width: 100%;"></div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <h3>Completed</h3>
+      <p class="stat-number">5</p>
+      <div class="progress-bar">
+        <div class="progress completed" style="width: 100%;"></div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <h3>In Progress</h3>
+      <p class="stat-number">2</p>
+      <div class="progress-bar">
+        <div class="progress in-progress" style="width: 60%;"></div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <h3>Not Yet Started</h3>
+      <p class="stat-number">0</p>
+      <div class="progress-bar">
+        <div class="progress not-started" style="width: 20%;"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact-dark">
+
+  <div class="contact-container">
+
+    <!-- Brand -->
+    <div class="contact-brand">
+      <h2>NovHawk</h2>
+      <p>
+        NovHawk is an innovation-focused technology company delivering smart IoT systems, software and SaaS solutions, machine learning applications, and modern digital experiences that drive real-world progress.
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-block">
+      <h3>Contact</h3>
+      <p>Email: novhawk37@gmail.com</p>
+      <p>Phone: +91 8220670251</p>
+      <p>
+        India – Global Services
+      </p>
+    </div>
+
+    <!-- Company -->
+    <div class="contact-block">
+      <h3>Company</h3>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Support</a>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="contact-social">
+      <h3>Let's Connect</h3>
+      <p>Follow NovHawk and stay connected with our latest updates.</p>  
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/novhawk?igsh=dGdxMWo0ZmozNmRu"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/novhawk-nh-82b348396?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://youtube.com/@novhawk?si=nzHbIlawDHTpiNzq"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="contact-bottom">
+    <p>© 2025 NovHawk. All rights reserved.</p>
+    <p>Powered by NovHawk</p>
+  </div>
+
+  <script>
+  // Combine all selectors into a single string separated by commas
+  const elements = document.querySelectorAll(
+    '.domains, .domain-card, .project-stats, .stat-card, .contact-dark'
+  );
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show'); // add .show class when in view
+        observer.unobserve(entry.target);   // stop observing once shown
+      }
+    });
+  }, { threshold: 0.15 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+
+
+</section>
+
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+  }
+  const links = document.querySelectorAll(".navbar nav a");
+  const current = location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === current) {
+      link.classList.add("active");
+    }
+  });
+
+</script>
+
+
+
+</body>
+</html>

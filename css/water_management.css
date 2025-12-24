@@ -1,0 +1,196 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background-color: #f5f7fb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar .logo img {
+  height: 45px;
+}
+
+/* =========================
+   HERO SECTION (Water Management)
+========================= */
+.page-hero {
+  text-align: center;
+  padding: 80px 20px 55px;
+
+  /* Gradient overlay + image */
+  background:
+    linear-gradient(135deg, rgba(22,163,74,0.85), rgba(42,82,152,0.85)),
+    url("../assets/water-bg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+}
+
+
+.page-hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.page-hero p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 8px 14px;
+  background-color: #16a34a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #15803d;
+  transform: translateX(-4px);
+}
+
+
+/* =========================
+   PROJECT DETAILS
+========================= */
+.project-details {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  animation-delay: 0.2s;
+}
+
+.project-details h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.project-details p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: #374151;
+}
+
+.project-details ul {
+  padding-left: 22px;
+  margin-bottom: 35px;
+}
+
+.project-details ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  list-style: disc;
+}
+
+/* =========================
+   FEATURE HIGHLIGHT (OPTIONAL)
+========================= */
+.project-details ul li::marker {
+  color: #16a34a;
+}
+
+
+.project-details h2 {
+  animation-delay: 0.4s;
+}
+
+.project-details p {
+  animation-delay: 0.6s;
+}
+
+.project-details ul {
+  animation-delay: 0.8s;
+}
+
+.project-details li {
+  animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+.project-details,
+.project-details h2,
+.project-details p,
+.project-details ul,
+.project-details li {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 2s ease forwards;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .page-hero h1 {
+    font-size: 28px;
+  }
+
+  .page-hero p {
+    font-size: 16px;
+  }
+
+  .project-details {
+    margin: 40px auto;
+  }
+}

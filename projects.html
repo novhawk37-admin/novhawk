@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | NovHawk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/project.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="assets/logo.jpeg" alt="NovHawk Logo">
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" >About</a>
+    <a href="services.html" >Services</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Our Projects</h1>
+    <p>Delivering real-world digital solutions</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects">
+
+    <a href="projects/billing.html" class="project-link">
+      <div class="project-card">
+        <h2>NovHawk Billing System</h2>
+        <p>
+          A complete billing and invoicing platform with user management, reports, and email automation.
+        </p>
+        <span class="tag">SaaS</span>
+      </div>
+    </a>
+
+    <a href="projects/agriculture.html" class="project-link">
+      <div class="project-card">
+        <h2>Smart Agriculture System</h2>
+        <p>
+          IoT-based smart farming solution with real-time
+          monitoring and analytics dashboard.
+        </p>
+        <span class="tag">Agriculture Monitoring</span>
+      </div>
+    </a>
+
+    <a href="projects/water_management.html" class="project-link">
+      <div class="project-card">
+        <h2>Smart Water Management System</h2>
+        <p>
+          Intelligent water monitoring and management system
+          with real-time tracking and usage analytics.
+        </p>
+        <span class="tag">Water Monitoring</span>
+      </div>
+    </a>
+
+
+    <a href="projects/weather.html" class="project-link">
+      <div class="project-card">
+        <h2>Smart Weather Monitoring System</h2>
+        <p>
+          Real-time weather monitoring system with live sensor
+          data visualization and environmental analytics.
+        </p>
+        <span class="tag">Weather Monitoring</span>
+      </div>
+    </a>
+
+    <a href="projects/career_recommendation.html" class="project-link">
+      <div class="project-card">
+        <h2>Career Recommendation System</h2>
+        <p>
+          AI-driven career recommendation system using machine learning models to match users with suitable career options.
+        </p>
+        <span class="tag">AI / ML</span>
+      </div>
+    </a>
+
+
+
+
+
+  </section>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProject()">×</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 NovHawk. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+
+  <script>
+  const modal = document.getElementById("projectModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+
+  function openProject(title, description) {
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    modal.style.display = "flex";
+  }
+
+  function closeProject() {
+    modal.style.display = "none";
+  }
+
+  // Close modal when clicking outside
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      closeProject();
+    }
+  };
+
+  // Animation observer (your existing code)
+  const projectsContainer = document.querySelector('.projects');
+  const projectCards = projectsContainer.querySelectorAll('.project-card');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        projectCards.forEach((card, i) => {
+          setTimeout(() => card.classList.add('show'), i * 150);
+        });
+        observer.unobserve(projectsContainer);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(projectsContainer);
+</script>
+
+
+
+
+</body>
+</html>

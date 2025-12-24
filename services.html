@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services | NovHawk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="assets/logo.jpeg" alt="NovHawk Logo">
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="service-hero">
+  <h1>Our Services</h1>
+  <p>
+    At NovHawk, we build smart, scalable digital solutions that help businesses
+    automate operations, increase efficiency, and grow faster.
+  </p>
+</section>
+
+
+<!-- SERVICES -->
+<section class="service-section">
+
+  <div class="service-grid">
+
+    <div class="service-box">
+  <i class="fas fa-code"></i>
+  <h3>Web Development</h3>
+  <p>
+    High-performance, responsive websites and web applications
+    crafted by NovHawk for speed, security, and scalability.
+  </p>
+</div>
+
+<div class="service-box">
+  <i class="fas fa-bolt"></i>
+  <h3>Real-Time Projects</h3>
+  <p>
+    Industry-focused real-time projects developed by NovHawk using
+    modern technologies, live data processing, and practical
+    implementations for students and businesses.
+  </p>
+</div>
+
+
+<div class="service-box">
+  <i class="fas fa-cloud"></i>
+  <h3>SaaS Product Development</h3>
+  <p>
+    End-to-end SaaS platforms developed by NovHawk with
+    secure authentication, subscriptions, and analytics.
+  </p>
+</div>
+
+<div class="service-box">
+  <i class="fas fa-credit-card"></i>
+  <h3>Billing & Invoicing Systems</h3>
+  <p>
+    Smart billing systems with automated invoicing, payment tracking,
+    and customer management for growing businesses.
+  </p>
+</div>
+
+<div class="service-box">
+  <i class="fas fa-chart-line"></i>
+  <h3>Business Analytics Dashboards</h3>
+  <p>
+    Data-driven dashboards that provide real-time insights into
+    sales, performance, and operational growth.
+  </p>
+</div>
+
+<div class="service-box">
+  <i class="fas fa-gears"></i>
+  <h3>Custom & Automation Solutions</h3>
+  <p>
+    Tailor-made automation and digital solutions built to solve
+    unique business challenges efficiently.
+  </p>
+</div>
+
+<div class="service-box">
+      <i class="fas fa-video"></i>
+      <h3>Video Editing</h3>
+      <p>
+        Professional video editing for social media, business promotions, and events.
+      </p>
+    </div>
+
+    <div class="service-box">
+      <i class="fas fa-camera"></i>
+      <h3>Photo Editing</h3>
+      <p>
+        High-quality photo enhancement, retouching, posters, and visual
+        branding designs.
+      </p>
+    </div>
+
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="service-cta">
+  <h2>Build smarter with NovHawk</h2>
+  <p>
+    Have an idea or a business challenge? NovHawk turns ideas into
+    powerful digital solutions.
+  </p>
+  <a href="contact.html">Start Your Project</a>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 NovHawk. All rights reserved.</p>
+</footer>
+
+
+<script>
+  // Select all elements to animate
+  const scrollElements = document.querySelectorAll('.service-section, .service-box, .service-cta');
+
+  const elementInView = (el, offset = 100) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return elementTop <= (window.innerHeight - offset);
+  };
+
+  const displayScrollElement = (element) => {
+    element.classList.add('show');
+  };
+
+  const hideScrollElement = (element) => {
+    element.classList.remove('show');
+  };
+
+  const handleScrollAnimation = () => {
+    scrollElements.forEach(el => {
+      if (elementInView(el, 100)) {
+        displayScrollElement(el);
+      } else {
+        hideScrollElement(el);
+      }
+    });
+  };
+
+  window.addEventListener('scroll', () => {
+    handleScrollAnimation();
+  });
+
+  // Trigger animation on page load
+  handleScrollAnimation();
+</script>
+
+
+</body>
+</html>
