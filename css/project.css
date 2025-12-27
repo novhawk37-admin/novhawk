@@ -61,21 +61,68 @@ h1, h2, h3 {
   background: #2563eb;
 }
 
+/* ================= SIDEBAR (ADDED) ================= */
+
+.menu-btn {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  left: -260px;              /* 🔥 hidden on LEFT */
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: #020617;
+  padding-top: 60px;
+  transition: left 0.35s ease;
+  z-index: 2000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background: #1e293b;
+}
+
+.sidebar a:hover {
+  background: #f1f5f9;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
 /* ===== PAGE HERO ===== */
 .page-hero {
   text-align: center;
   padding: 100px 20px 60px;
-  
-  /* Background image with gradient overlay */
   background: linear-gradient(
-      rgba(47, 48, 71, 0.6),  /* gradient color overlay start */
-      rgba(52, 57, 78, 0.6)  /* gradient color overlay end */
+      rgba(47, 48, 71, 0.6),
+      rgba(52, 57, 78, 0.6)
     ),
-    url("../assets/project-bg.png"); /* path to your image file */
-    
-  background-size: cover;       /* make sure image covers entire section */
-  background-position: center;  /* center the image */
-  background-repeat: no-repeat; /* prevent repeating */
+    url("../assets/project-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .page-hero h1 {
@@ -114,10 +161,8 @@ h1, h2, h3 {
   flex-direction: column;
   justify-content: space-between;
 
-  min-height: 260px;   /* ⭐ KEY FIX */
+  min-height: 260px;
 }
-
-
 
 .project-card h2 {
   font-size: 22px;
@@ -132,53 +177,19 @@ h1, h2, h3 {
 
 .project-card .tag {
   display: inline-block;
-  padding: 8px 15px;          /* smaller padding */
+  padding: 8px 15px;
   background-color: #6366f1;
   color: #fff;
-  border-radius: 4px;        /* tighter corners */
-  font-size: 14px;           /* smaller text */
+  border-radius: 4px;
+  font-size: 14px;
   font-weight: 500;
-  width: fit-content;        /* prevents stretching */
+  width: fit-content;
 }
-
 
 .project-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 20px rgba(0,0,0,0.15);
 }
-
-.modal-content.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-content {
-  background: #fff;
-  padding: 30px;
-  max-width: 500px;
-  border-radius: 10px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-
 
 /* ================= SCROLL ANIMATION ================= */
 .project-card {
@@ -192,7 +203,6 @@ h1, h2, h3 {
   transform: translateY(0);
 }
 
-
 .project-card:nth-child(1).show { transition-delay: 0.1s; }
 .project-card:nth-child(2).show { transition-delay: 0.3s; }
 .project-card:nth-child(3).show { transition-delay: 0.5s; }
@@ -202,10 +212,7 @@ h1, h2, h3 {
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0,0,0,0.6);
   justify-content: center;
   align-items: center;
@@ -239,7 +246,6 @@ h1, h2, h3 {
   font-size: 24px;
   cursor: pointer;
   color: #1f2937;
-  transition: color 0.3s;
 }
 
 .modal-content .close:hover {
@@ -257,6 +263,30 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+
+  .navbar nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2100;
+    color: #111827;
+  }
+
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .navbar .logo {
+    margin-left: 40px;
+  }
+
   .page-hero h1 {
     font-size: 36px;
   }
