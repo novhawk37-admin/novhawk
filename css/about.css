@@ -61,6 +61,96 @@ h1, h2, h3 {
   background: #2563eb;
 }
 
+
+/* ================= SIDEBAR ================= */
+.menu-btn {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  left: -260px;              /* 🔥 hidden on LEFT */
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: #020617;
+  padding-top: 60px;
+  transition: left 0.35s ease;
+  z-index: 2000;
+}
+
+.sidebar.active {
+  left: 0;                   /* 🔥 slide in from LEFT */
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background: #1e293b;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+
+/* ===== MOBILE NAVBAR SPACING FIX (MATCH style.css) ===== */
+@media (max-width: 768px) {
+
+  /* Hide desktop menu */
+  .navbar nav {
+    display: none;
+  }
+
+  /* Hamburger button */
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    font-size: 24px;
+    z-index: 2100;
+    cursor: pointer;
+  }
+
+  /* Push logo to the right (THIS WAS MISSING) */
+  .navbar .logo {
+    margin-left: 40px; /* 👈 SAME visual space as style.css */
+  }
+
+  /* Navbar padding stays clean */
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  /* Sidebar from LEFT */
+  .sidebar {
+    left: -260px;
+    right: auto;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+}
+
+
+
+
 /* ===== HERO ===== */
 .about-hero {
   text-align: center;
@@ -242,9 +332,9 @@ h1, h2, h3 {
 
 
 .value {
-  color: #374151;
   text-align: left;         /* 🔥 force left alignment */
   justify-self: start;
+  color: #374151;
 }
 
 @media (max-width: 900px) {
