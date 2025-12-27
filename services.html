@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Services | NovHawk</title>
-  <meta name="description" content="NovHawk delivers innovative student projects, web development, and IoT solutions for real-world impact.">
-  <meta name="robots" content="index, follow">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovHawk | Projects for Progress</title>
 
+<meta name="description" content="NovHawk delivers innovative student projects, web development, and IoT solutions for real-world impact.">
+
+<meta name="robots" content="index, follow">
+
+  <meta charset="UTF-8">
+  <title>Services | NovHawk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/service.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -33,6 +37,38 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
+
+
+<!-- Sidebar Toggle Button -->
+
+<div class="menu-btn" onclick="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <span class="close-btn" onclick="toggleSidebar()">×</span>
+
+  <a href="index.html" onclick="toggleSidebar()">
+    <i class="fas fa-house"></i> Home
+  </a>
+
+  <a href="about.html" onclick="toggleSidebar()">
+    <i class="fas fa-user"></i> About
+  </a>
+
+  <a href="#services" onclick="toggleSidebar()">
+    <i class="fas fa-gear"></i> Services
+  </a>
+
+  <a href="projects.html" onclick="toggleSidebar()">
+    <i class="fas fa-briefcase"></i> Projects
+  </a>
+
+  <a href="contact.html" onclick="toggleSidebar()">
+    <i class="fas fa-envelope"></i> Contact
+  </a>
+</div>
 
 
 <!-- HERO -->
@@ -143,6 +179,23 @@
 <footer>
   <p>© 2025 NovHawk. All rights reserved.</p>
 </footer>
+
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+  }
+  const links = document.querySelectorAll(".navbar nav a");
+  const current = location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === current) {
+      link.classList.add("active");
+    }
+  });
+
+</script>
+
 
 
 <script>
