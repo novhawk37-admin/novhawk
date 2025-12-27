@@ -61,22 +61,68 @@ h1, h2, h3 {
   background: #2563eb;
 }
 
+/* ================= SIDEBAR (ADDED) ================= */
+
+.menu-btn {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  left: -260px;              /* 🔥 hidden on LEFT */
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: #020617;
+  padding-top: 60px;
+  transition: left 0.35s ease;
+  z-index: 2000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background: #1e293b;
+}
+
+.sidebar a:hover {
+  background: #f1f5f9;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
 /* ===== HERO ===== */
 .service-hero {
   text-align: center;
   padding: 100px 20px 60px;
-  
-  /* Background image with gradient overlay */
   background: linear-gradient(
-      rgba(47, 48, 71, 0.6),  /* gradient color overlay start */
-      rgba(52, 57, 78, 0.6)  /* gradient color overlay end */
+      rgba(47, 48, 71, 0.6),
+      rgba(52, 57, 78, 0.6)
     ),
-    url("../assets/service-bg.png"); /* path to your image file */
-    
-  background-size: cover;       /* make sure image covers entire section */
-  background-position: center;  /* center the image */
-  background-repeat: no-repeat; /* prevent repeating */
-  
+    url("../assets/service-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
 }
 
@@ -192,6 +238,30 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+
+  .navbar nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2100;
+    color: #111827;
+  }
+
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .navbar .logo {
+    margin-left: 40px;
+  }
+
   .service-hero h1 {
     font-size: 36px;
   }
