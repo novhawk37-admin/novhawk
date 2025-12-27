@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Contact | NovHawk</title>
-  <meta name="description" content="NovHawk delivers innovative student projects, web development, and IoT solutions for real-world impact.">
-  <meta name="robots" content="index, follow">
+  <title>NovHawk | Projects for Progress</title>
+
+<meta name="description" content="NovHawk delivers innovative student projects, web development, and IoT solutions for real-world impact.">
+
+<meta name="robots" content="index, follow">
+
   <meta charset="UTF-8">
+  <title>Contact | NovHawk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/contact.css">
 
   <style>
@@ -31,6 +36,38 @@
   </nav>
 </header>
 
+
+<!-- Sidebar Toggle Button -->
+
+<div class="menu-btn" onclick="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <span class="close-btn" onclick="toggleSidebar()">×</span>
+
+  <a href="index.html" onclick="toggleSidebar()">
+    <i class="fas fa-house"></i> Home
+  </a>
+
+  <a href="about.html" onclick="toggleSidebar()">
+    <i class="fas fa-user"></i> About
+  </a>
+
+  <a href="services.html" onclick="toggleSidebar()">
+    <i class="fas fa-gear"></i> Services
+  </a>
+
+  <a href="projects.html" onclick="toggleSidebar()">
+    <i class="fas fa-briefcase"></i> Projects
+  </a>
+
+  <a href="#contact" onclick="toggleSidebar()">
+    <i class="fas fa-envelope"></i> Contact
+  </a>
+</div>
+
   <!-- Page Hero -->
   <section class="page-hero">
     <h1>Contact Us</h1>
@@ -44,7 +81,7 @@
       <h2>Get in Touch</h2>
       <p><strong>Email:</strong> novhawk37@gmail.com</p>
       <p><strong>Phone:</strong> +91 8220670251</p>
-      <p><strong>Location:</strong> Tamil Nadu, India</p>
+      <p><strong>Location:</strong> India</p>
     </div>
 
     <form class="contact-form" id="contactForm">
@@ -106,6 +143,22 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   <footer>
     <p>© 2025 NovHawk. All rights reserved.</p>
   </footer>
+
+
+  <script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+  }
+  const links = document.querySelectorAll(".navbar nav a");
+  const current = location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === current) {
+      link.classList.add("active");
+    }
+  });
+
+</script>
 
 </body>
 </html>
