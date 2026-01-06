@@ -395,11 +395,13 @@ h1, h2, h3 {
 /* Image wrapper – PERFECT SQUARE */
 .team-img {
   width: 120px;
-  aspect-ratio: 1 / 1;   /* 🔥 forces square */
+  aspect-ratio: 1 / 1;      /* perfect square */
   margin: 0 auto 15px;
   overflow: hidden;
-  border-radius: 0;      /* 🔥 square corners */
-  background: #e5e7eb;
+  border-radius: 0;         /* square corners */
+  background: #ffffff;
+
+  border: 3px solid #2563eb;   /* 🔥 BORDER SHOWN */
 }
 
 .team-img img {
