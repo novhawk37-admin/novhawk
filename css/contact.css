@@ -210,6 +210,78 @@ h1, h2, h3 {
   background-color: #4f46e5;
 }
 
+/* ================= CONTACT / FOOTER ================= */
+.contact-dark {
+  background: linear-gradient(135deg, #020617, #020b2d);
+  color: #e5e7eb;
+  padding: 80px 70px 40px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.contact-dark h2,
+.contact-dark h3 {
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+/* TEXT */
+.contact-dark p {
+  color: #cbd5f5;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* 🔥 FIXED COMPANY LINKS */
+.contact-dark a,
+.contact-dark a:link,
+.contact-dark a:visited {
+  display: block;
+  margin-bottom: 8px;
+  color: #c7d2fe !important;
+  text-decoration: none !important;
+  font-size: 15px;
+}
+
+.contact-dark a:hover {
+  color: #6366f1 !important;
+  text-decoration: underline !important;
+}
+
+/* Container for social icons */
+.social-icons {
+  display: flex;       /* Makes children horizontal */
+  gap: 12px;           /* Space between icons */
+  align-items: center; /* Vertically center if needed */
+}
+
+/* Individual icons */
+.social-icons a {
+  font-size: 18px;
+  color: #c7d2fe;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #6366f1;
+}
+
+
+/* BOTTOM BAR */
+.contact-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
 /* ================= SCROLL ANIMATION ================= */
 .contact,
 .contact-info,
